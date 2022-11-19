@@ -17,15 +17,16 @@ function getName()
     let userName = prompt("What is your name?");
 
     // check for a vaild name
-    if (userName === null || !isNaN(userName)){
+    if (userName === null || !isNaN(userName)) {
         // while the name is not valid continue to loop until correct format is received
-        while (userName !== null || isNaN(userName)){
+        while (userName !== null || isNaN(userName)) {
             alert("Invalid name! Please enter a valid name.");
-            userName = prompt("What is your name ? ");
+            userName = prompt("What is your name?");
             console.log(userName)
             // once correct format is received send alert greeting message
-            if (userName !== null || !isNaN(userName)){
+            if (userName !== null || !isNaN(userName)) {
                 alert("Hello " + userName + "!");
+                console.log(userName)
                 break;
            }
         }
