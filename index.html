@@ -8,8 +8,33 @@
     <script src="javascript/numberCalculator.js"></script>
 </head>
 <body>
+    <!--external javascript sources-->
     <script>welcomeMessage();</script>
     <script>getName();</script>
     <script>numberCalculator();</script>
+
+    <!--internal javascript sources-->
+    <script type="text/javascript">
+
+        // prompt user to use the calculator again or not
+        let userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
+
+        // loop until the user exits the calculator by typing in NO
+        while (userSelection !== null || isNaN(userName)) {
+
+            if (userSelection.toUpperCase() == "YES") {
+                numberCalculator();
+                userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
+            }
+            else if (userSelection.toUpperCase() == "NO") {
+                alert("Thank you for using the Simple Calculator! Have a great day!")
+                break;
+            }
+            else {
+                userSelection = prompt("Invalid choice! Please type YES or NO to use the calculator again.");
+            }
+        }
+        
+    </script>
 </body>
 </html>
