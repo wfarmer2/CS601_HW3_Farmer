@@ -6,35 +6,47 @@
     <title>Simple Calculator</title>
     <script src="javascript/message.js"></script>
     <script src="javascript/numberCalculator.js"></script>
-</head>
-<body>
-    <!--external javascript sources-->
-    <script>welcomeMessage();</script>
-    <script>getName();</script>
-    <script>numberCalculator();</script>
 
-    <!--internal javascript sources-->
-    <script type="text/javascript">
+     <!--external and internal javascript sources-->
+     <script type="text/javascript">
 
-        // prompt user to use the calculator again or not
-        let userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
+        function calculatorProcess() {
+            welcomeMessage();
+            getName();
+            numberCalculator();
+        }
 
-        // loop until the user exits the calculator by typing in NO
-        while (userSelection !== null || isNaN(userName)) {
+        function repeatProcess() {
+            // prompt user to use the calculator again or not
+            let userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
 
-            if (userSelection.toUpperCase() == "YES") {
-                numberCalculator();
-                userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
-            }
-            else if (userSelection.toUpperCase() == "NO") {
-                alert("Thank you for using the Simple Calculator! Have a great day!")
-                break;
-            }
-            else {
-                userSelection = prompt("Invalid choice! Please type YES or NO to use the calculator again.");
+            // loop until the user exits the calculator by typing in NO
+            while (userSelection !== null || isNaN(userName)) {
+
+                if (userSelection.toUpperCase() == "YES") {
+                    numberCalculator();
+                    userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
+                }
+                else if (userSelection.toUpperCase() == "NO") {
+                    alert("Thank you for using the Simple Calculator! Have a great day!")
+                    break;
+                }
+                else {
+                    userSelection = prompt("Invalid choice! Please type YES or NO to use the calculator again.");
+                }
             }
         }
-        
     </script>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the Simple Calculator!</h1>
+        <p>Please click on the button to start the calculator tool.</p>
+    </div>
+    <div>
+        <form>
+            <input type="button" value="Start Simple Calculator" onclick="calculatorProcess();repeatProcess();">
+        </form>
+    </div>
 </body>
 </html>
