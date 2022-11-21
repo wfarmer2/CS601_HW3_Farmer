@@ -1,0 +1,32 @@
+/* global color variables */
+:root {
+    --main-color: ivory;
+    --secondary-color: black;
+    --tertiary-color: crimson;
+}
+/* header and body styling */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    background-color: var(--main-color);
+}
+div {
+    display: grid;
+    place-items: center;
+  }
+.header {
+    text-align: center;
+    letter-spacing: .10em;
+}
+/* button styling */
+.button {
+    background-color: var(--tertiary-color);
+    padding: 15px 32px;
+    text-align: center;
+}
+/* image styling */
+img {
+    display: block;
+    margin: auto;
+    padding: 2em;
+}

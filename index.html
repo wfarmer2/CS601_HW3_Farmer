@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="index" content="Simple Calculator">
     <title>Simple Calculator</title>
+    <link href="style/style.css" rel="stylesheet">
+    <!--external javascript sources-->
     <script src="javascript/message.js"></script>
     <script src="javascript/numberCalculator.js"></script>
-
-     <!--external and internal javascript sources-->
+     <!--internal javascript sources-->
      <script type="text/javascript">
 
+        /**
+        * Tasks that need to be performed for calculator to work.
+        */
         function calculatorProcess() {
             welcomeMessage();
             getName();
             numberCalculator();
         }
 
+        /**
+        * Repeat process for a user to keep using the calculator.
+        */
         function repeatProcess() {
             // prompt user to use the calculator again or not
             let userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
@@ -39,14 +46,17 @@
     </script>
 </head>
 <body>
-    <div>
+    <div class="header">
         <h1>Welcome to the Simple Calculator!</h1>
         <p>Please click on the button to start the calculator tool.</p>
     </div>
-    <div>
+    <div class="button">
         <form>
             <input type="button" value="Start Simple Calculator" onclick="calculatorProcess();repeatProcess();">
         </form>
+    </div>
+    <div class="calculator_image">
+        <img src="calculator.png" alt="calculator icon" width="300" height="300">
     </div>
 </body>
 </html>
