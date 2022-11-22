@@ -20,16 +20,15 @@ function retrieveUsername()
 
     // loop until correct format is received
     while (userName === null || !isNaN(userName)){
-        
         // variable for name of the user
         userName = prompt("What is your name?");
-      
         // conditional check for proper name format
         if (userName === null || !isNaN(userName)) {
             alert("Invalid name! Please enter your name in text format.");
         }
         else
         {
+          // greet user with hello message when string is received
           alert("Hello " + userName + "!")
           break;
         }
