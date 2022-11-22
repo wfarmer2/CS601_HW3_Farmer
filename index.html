@@ -14,8 +14,10 @@
         * Tasks that need to be performed for calculator to work.
         */
         function calculatorProcess() {
+            // call functions from message.js
             welcomeMessage();
             retrieveUsername();
+            // call functions from numberCalculator.js
             numberCalculator();
         }
         /**
@@ -47,15 +49,18 @@
     </script>
 </head>
 <body>
+    <!--header content of page-->
     <div class="header">
         <h1>Welcome to the Simple Calculator!</h1>
         <p>Please click on the button to start the calculator tool.</p>
     </div>
+    <!--button to start calculator-->
     <div class="button">
         <form>
             <input type="button" value="Start Simple Calculator" onclick="calculatorProcess();repeatProcess();">
         </form>
     </div>
+    <!--image of calculator-->
     <div class="calculator_image">
         <img src="calculator.png" alt="calculator icon" width="300" height="300">
     </div>
