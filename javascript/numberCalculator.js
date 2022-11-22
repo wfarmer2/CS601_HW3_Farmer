@@ -9,12 +9,10 @@ function numberCheck(userInput) {
         while (userInput !== null || !isNaN(userInput)) {
             alert("Invalid number! Please enter a valid number.");
             userInput = prompt("Please enter a number.");
-            console.log(userInput)
 
             // once number is received move on to next prompt
             if (userInput !== null || isNaN(userInput)) {
                 userInput = parseFloat(userInput);
-                console.log(userInput)
                 break;
             }
         }
@@ -23,7 +21,6 @@ function numberCheck(userInput) {
     else
     {
         userInput = parseFloat(userInput);
-        console.log(userInput)
     }
     return userInput;
 }
@@ -54,10 +51,8 @@ function numberCalculator() {
     // alert if number is a big 
     if (combinedNumber > 10) {
         alert("That is a big number!")
-        console.log(combinedNumber)
     }
     else if (combinedNumber <= 10) {
         alert("That is a small number!")
-        console.log(combinedNumber)
     }
 }
