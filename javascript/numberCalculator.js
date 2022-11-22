@@ -1,7 +1,7 @@
 /**
 * Checks to see if user input is a valid number or not. 
 * Validates input if it is not text to ensure text number is received.
-* TODO: Add validation against special characters (couldn't get it working)
+* TODO: Add validation against special characters and spaces (couldn't get it working)
 * @param userInput is the value a user is giving the prompt.
 */
 function numberCheck(userInput) {
@@ -10,9 +10,9 @@ function numberCheck(userInput) {
         // while the number is not valid continue to loop until number is received
         while (userInput !== null || !isNaN(userInput)) {
             alert("Invalid number! Please enter a valid number.");
-            userInput = prompt("Please enter a number.");
+            userInput = prompt("Please enter a number again.");
             // once number is received move on to next prompt
-            if (userInput !== null || isNaN(userInput)) {
+            if (userInput !== null && !isNaN(userInput)) {
                 userInput = parseFloat(userInput);
                 break;
             }
