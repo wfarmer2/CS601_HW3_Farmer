@@ -29,7 +29,7 @@ function retrieveUsername()
         else
         {
           // greet user with hello message when string is received
-          alert("Hello " + userName + "!")
+          alert("Hello " + userName + "!");
           break;
         }
       }
