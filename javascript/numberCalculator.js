@@ -53,7 +53,7 @@ function numberCalculator() {
 
     // alert if number is a big 
     if (combinedNumber > 10) {
-        alert("That is a small number!")
+        alert("That is a big number!")
         console.log(combinedNumber)
     }
     else if (combinedNumber <= 10) {
