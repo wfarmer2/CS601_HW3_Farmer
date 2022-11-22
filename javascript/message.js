@@ -1,5 +1,5 @@
 /**
-* Alerts user with a welcome message.
+* Alerts user with a welcome message when starting the program.
 */
 function welcomeMessage() 
 {
@@ -10,28 +10,28 @@ function welcomeMessage()
 /**
 * Prompts a user for their name and validates if 
 * it is the correct format then alerts a greeting message.
+* Validates input if it is not a number to ensure text value is received.
+* TODO: Add validation against special characters (couldn't get it working)
 */
 function retrieveUsername()
 {
-    // variable for name of the user
-    let userName = prompt("What is your name?");
+    // define variable
+    let userName = null;
 
-    // check for a vaild name
-    if (userName === null || !isNaN(userName)) {
-        // while the name is not valid continue to loop until correct format is received
-        while (userName !== null || isNaN(userName)) {
-            alert("Invalid name! Please enter a valid name.");
-            userName = prompt("What is your name?");
-            // once correct format is received send alert greeting message
-            if (userName !== null || !isNaN(userName)) {
-                alert("Hello " + userName + "!");
-                break;
-           }
+    // loop until correct format is received
+    while (userName === null || !isNaN(userName)){
+        
+        // variable for name of the user
+        userName = prompt("What is your name?");
+      
+        // conditional check for proper name format
+        if (userName === null || !isNaN(userName)) {
+            alert("Invalid name! Please enter your name in text format.");
         }
-    } 
-    // if valid name was received on first try send alert greeting message
-    else
-    {
-        alert("Hello " + userName + "!");
-    }
+        else
+        {
+          alert("Hello " + userName + "!")
+          break;
+        }
+      }
 }

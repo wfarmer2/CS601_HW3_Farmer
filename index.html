@@ -19,32 +19,7 @@
             retrieveUsername();
             // call functions from numberCalculator.js
             numberCalculator();
-        }
-        /**
-        * Repeat process for a user to keep using the calculator.
-        */
-        function repeatProcess() {
-            // prompt user to use the calculator again or not
-            let userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
-
-            // loop until the user exits the calculator by typing in NO
-            while (userSelection !== null || isNaN(userName)) {
-
-                // if user wants to continue with the calculator again, call the numberCalculator function
-                if (userSelection.toUpperCase() == "YES") {
-                    numberCalculator();
-                    userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
-                }
-                // if user wants to stop the calculator send a thank you message and close
-                else if (userSelection.toUpperCase() == "NO") {
-                    alert("Thank you for using the Simple Calculator! Take care!")
-                    break;
-                }
-                // reprompt the user if the input is not a YES or NO
-                else {
-                    userSelection = prompt("Invalid choice! Please type YES or NO to use the calculator again.");
-                }
-            }
+            repeatProcess();
         }
     </script>
 </head>
@@ -57,7 +32,7 @@
     <!--button to start calculator-->
     <div class="button">
         <form>
-            <input type="button" value="Start Simple Calculator" onclick="calculatorProcess();repeatProcess();">
+            <input type="button" value="Start Simple Calculator" onclick="calculatorProcess();">
         </form>
     </div>
     <!--image of calculator-->
