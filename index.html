@@ -8,17 +8,16 @@
     <!--external javascript sources-->
     <script src="javascript/message.js"></script>
     <script src="javascript/numberCalculator.js"></script>
-     <!--internal javascript sources-->
-     <script>
+    <!--internal javascript sources-->
+    <script>
         /**
         * Tasks that need to be performed for calculator to work.
         */
         function calculatorProcess() {
             welcomeMessage();
-            getName();
+            retrieveUsername();
             numberCalculator();
         }
-
         /**
         * Repeat process for a user to keep using the calculator.
         */
@@ -29,14 +28,17 @@
             // loop until the user exits the calculator by typing in NO
             while (userSelection !== null || isNaN(userName)) {
 
+                // if user wants to continue with the calculator again, call the numberCalculator function
                 if (userSelection.toUpperCase() == "YES") {
                     numberCalculator();
                     userSelection = prompt("Would you like to use the calculator again? Please type YES or NO.");
                 }
+                // if user wants to stop the calculator send a thank you message and close
                 else if (userSelection.toUpperCase() == "NO") {
-                    alert("Thank you for using the Simple Calculator! Have a great day!")
+                    alert("Thank you for using the Simple Calculator! Take care!")
                     break;
                 }
+                // reprompt the user if the input is not a YES or NO
                 else {
                     userSelection = prompt("Invalid choice! Please type YES or NO to use the calculator again.");
                 }

@@ -11,7 +11,7 @@ function welcomeMessage()
 * Prompts a user for their name and validates if 
 * it is the correct format then alerts a greeting message.
 */
-function getName()
+function retrieveUsername()
 {
     // variable for name of the user
     let userName = prompt("What is your name?");
